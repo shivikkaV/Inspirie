@@ -401,21 +401,29 @@
     <button class="modal-close" onclick="closeModal()">×</button>
     <h3>Let's Talk</h3>
     <p>Tell us a bit about your business and what you're looking for. We'll be in touch within one business day.</p>
-    <div class="form-field"><label>Your Name</label><input type="text" placeholder="Jane Smith"/></div>
-    <div class="form-field"><label>Business Name</label><input type="text" placeholder="Your Business"/></div>
-    <div class="form-field"><label>Email</label><input type="email" placeholder="hello@yourbusiness.com"/></div>
-    <div class="form-field">
-      <label>I'm interested in…</label>
-      <select>
-        <option>Website Creation</option>
-        <option>Branding / Identity</option>
-        <option>Social Media Management</option>
-        <option>A Combined Package</option>
-        <option>Not sure yet</option>
-      </select>
-    </div>
-    <div class="form-field"><label>Anything else?</label><textarea placeholder="Tell us a bit about your goals…"></textarea></div>
-    <button class="btn-primary-inspirie w-100" onclick="closeModal()">Send Message</button>
+    <form id="contactForm" action="https://formspree.io/f/xlgydyvp" method="POST" onsubmit="handleFormSubmit(event)">
+      <div class="form-field"><label>Your Name</label><input type="text" name="name" placeholder="Jane Smith" required/></div>
+      <div class="form-field"><label>Business Name</label><input type="text" name="business" placeholder="Your Business" required/></div>
+      <div class="form-field"><label>Email</label><input type="email" name="email" placeholder="hello@yourbusiness.com" required/></div>
+      <div class="form-field">
+        <label>I'm interested in…</label>
+        <select name="interest">
+          <option>Website Creation</option>
+          <option>Branding / Identity</option>
+          <option>Social Media Management</option>
+          <option>A Combined Package</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="form-field"><label>Anything else?</label><textarea name="message" placeholder="Tell us a bit about your goals…"></textarea></div>
+      <button type="submit" class="btn-primary-inspirie w-100" id="submitBtn">Send Message</button>
+    </form>
+    <p id="formSuccess" style="display:none; text-align:center; color:var(--green); font-weight:500; margin-top:1rem;">
+      ✓ Message sent! We'll be in touch within one business day.
+    </p>
+    <p id="formError" style="display:none; text-align:center; color:#c0392b; font-size:0.875rem; margin-top:1rem;">
+      Something went wrong. Please try again or email us directly at <a href="mailto:info@inspirie.ca" style="color:#c0392b;">info@inspirie.ca</a>.
+    </p>
   </div>
 </div>
 

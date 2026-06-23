@@ -24,6 +24,16 @@ function closeMobile() {
 
 /* ── CONTACT MODAL ──────────────────────────── */
 function openModal() {
+  // Reset form and messages every time the modal opens
+  var form = document.getElementById('contactForm');
+  var success = document.getElementById('formSuccess');
+  var error = document.getElementById('formError');
+  var btn = document.getElementById('submitBtn');
+  if (form) form.reset();
+  if (form) form.style.display = 'block';
+  if (success) success.style.display = 'none';
+  if (error) error.style.display = 'none';
+  if (btn) { btn.textContent = 'Send Message'; btn.disabled = false; }
   document.getElementById('contactModal').classList.add('open');
 }
 function closeModal() {
@@ -32,6 +42,39 @@ function closeModal() {
 function closeModalOutside(e) {
   if (e.target === document.getElementById('contactModal')) closeModal();
 }
+ 
+/* ── FORMSPREE SUBMIT ───────────────────────── */
+async function handleFormSubmit(e) {
+  e.preventDefault();
+  var form = document.getElementById('contactForm');
+  var btn = document.getElementById('submitBtn');
+  var success = document.getElementById('formSuccess');
+  var error = document.getElementById('formError');
+ 
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  error.style.display = 'none';
+ 
+  try {
+    var response = await fetch('https://formspree.io/f/xlgydyvp', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+ 
+    if (response.ok) {
+      form.style.display = 'none';
+      success.style.display = 'block';
+    } else {
+      throw new Error('Server error');
+    }
+  } catch (err) {
+    btn.textContent = 'Send Message';
+    btn.disabled = false;
+    error.style.display = 'block';
+  }
+}
+ 
 
 /* ── FADE-UP ON SCROLL ──────────────────────── */
 function observeFadeUps() {
