@@ -29,11 +29,13 @@
 
 <!-- ══ NAVBAR ══════════════════════════════════════════════ -->
 <nav id="navbar">
-  <a class="nav-brand" href="index.html">Inspirie<span>.</span></a>
+  <a class="nav-brand" href="">
+    <img src="assets/logo.png" alt="Inspirie Logo" class="nav-logo">
+  </a>
   <div class="nav-links">
-    <a class="nav-link-item" id="nav-home" href="index.html">Home</a>
-    <a class="nav-link-item" id="nav-about" href="about.html">About</a>
-    <a class="nav-link-item" id="nav-pricing" href="pricing.html">Pricing</a>
+    <a class="nav-link-item" id="nav-home" href="">Home</a>
+    <a class="nav-link-item" id="nav-about" href="/about">About</a>
+    <a class="nav-link-item" id="nav-pricing" href="/pricing">Pricing</a>
     <a class="nav-link-item nav-cta" href="#" onclick="openModal(); return false;">Get Started</a>
   </div>
   <div class="nav-hamburger" onclick="toggleMobile()">
@@ -41,9 +43,9 @@
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a class="nav-link-item" href="index.html" onclick="closeMobile()">Home</a>
-  <a class="nav-link-item" href="about.html" onclick="closeMobile()">About</a>
-  <a class="nav-link-item" href="pricing.html" onclick="closeMobile()">Pricing</a>
+  <a class="nav-link-item" href="" onclick="closeMobile()">Home</a>
+  <a class="nav-link-item" href="/about" onclick="closeMobile()">About</a>
+  <a class="nav-link-item" href="/pricing" onclick="closeMobile()">Pricing</a>
   <a class="btn-primary-inspirie" href="#" onclick="openModal(); closeMobile(); return false;">Get Started</a>
 </div>
 
@@ -60,11 +62,11 @@
         </div>
         <h1>Build a brand<br>that <em>truly</em><br>stands out.</h1>
         <p class="hero-sub">
-          Inspirie delivers high-quality websites, cohesive brand identities, and strategic social media — built specifically for the small businesses that power Kingston.
+          Inspirie delivers high-quality websites, cohesive brand identities, and strategic social media built specifically for the small businesses that power Kingston.
         </p>
         <div class="hero-actions">
-          <a class="btn-primary-inspirie" href="pricing.html">See Our Packages</a>
-          <a class="btn-outline-inspirie" href="about.html">Our Story</a>
+          <a class="btn-primary-inspirie" href="/pricing">See Our Packages</a>
+          <a class="btn-outline-inspirie" href="/about">Our Story</a>
         </div>
         <div class="hero-stats">
           <div class="stat-item">
@@ -109,21 +111,21 @@
         <div class="service-card">
           <div class="service-icon"><i class="bi bi-globe2"></i></div>
           <h4>Website Creation</h4>
-          <p>From clean template-based sites to fully custom builds with advanced animations — we craft web experiences your visitors remember.</p>
+          <p>From clean template-based sites to fully custom builds with advanced animations, we craft web experiences your visitors remember.</p>
         </div>
       </div>
       <div class="col-md-4 fade-up">
         <div class="service-card">
           <div class="service-icon"><i class="bi bi-layers-half"></i></div>
           <h4>Brand Identity</h4>
-          <p>Logos, colour palettes, and typography systems that communicate who you are at a glance — cohesive, professional, and unmistakably yours.</p>
+          <p>Logos, colour palettes, and typography systems that communicate who you are at a glance; cohesive, professional, and unmistakably yours.</p>
         </div>
       </div>
       <div class="col-md-4 fade-up">
         <div class="service-card">
           <div class="service-icon"><i class="bi bi-megaphone"></i></div>
           <h4>Social Media</h4>
-          <p>Trend-aware, relevant content planned and published consistently — so your channels stay active, engaging, and on-brand every week.</p>
+          <p>Trend-aware, relevant content planned and published consistently so your channels stay active, engaging, and on-brand every week.</p>
         </div>
       </div>
     </div>
@@ -181,7 +183,7 @@
   <div class="container text-center">
     <span class="section-label" style="color:rgba(255,255,255,0.7)">Ready to start?</span>
     <h2>Let's build something<br>worth remembering.</h2>
-    <p>Book a free discovery call — we'll learn about your business and find the perfect fit.</p>
+    <p>Book a free discovery call! We'll learn about your business and find the perfect fit.</p>
     <button class="btn-white" onclick="openModal()">Book a Free Call</button>
   </div>
 </div>
@@ -191,30 +193,40 @@
   <div class="container">
     <div class="row g-4">
       <div class="col-lg-4 col-md-6">
-        <div class="footer-brand">Inspirie<span>.</span></div>
+        <a class="nav-brand" href="">
+          <img src="assets/logo.png" alt="Inspirie Logo" class="nav-logo">
+        </a>
         <p style="font-size:0.875rem; line-height:1.75; max-width:280px;">
-          Kingston's creative agency for small businesses — building brands, websites, and social presences that actually work.
+          Kingston's creative agency for small businesses; building digital presences that are both impactful and memorable.
         </p>
         <div class="social-icons">
-          <div class="social-icon"><i class="bi bi-instagram"></i></div>
-          <div class="social-icon"><i class="bi bi-facebook"></i></div>
-          <div class="social-icon"><i class="bi bi-linkedin"></i></div>
-          <div class="social-icon"><i class="bi bi-tiktok"></i></div>
+          <a href="https://www.instagram.com/inspiriemarketing/">
+            <div class="social-icon"><i class="bi bi-instagram"></i></div>
+          </a>
+          <a href="https://www.facebook.com/people/Inspirie-Creative-Agency/61591003546255/">
+            <div class="social-icon"><i class="bi bi-facebook"></i></div>
+          </a>
+          <a href="https://www.linkedin.com/in/inspirie-creative-agency-11b61b419/?isSelfProfile=true">
+            <div class="social-icon"><i class="bi bi-linkedin"></i></div>
+          </a>
+          <a href="">
+            <div class="social-icon"><i class="bi bi-tiktok"></i></div>
+          </a>
         </div>
       </div>
       <div class="col-lg-2 col-md-6 offset-lg-1">
         <h6>Navigate</h6>
-        <a class="footer-link" href="index.html">Home</a>
-        <a class="footer-link" href="about.html">About</a>
-        <a class="footer-link" href="pricing.html">Pricing</a>
+        <a class="footer-link" href="">Home</a>
+        <a class="footer-link" href="/about">About</a>
+        <a class="footer-link" href="/pricing">Pricing</a>
         <a class="footer-link" href="#" onclick="openModal(); return false;">Contact</a>
       </div>
       <div class="col-lg-2 col-md-6">
         <h6>Services</h6>
-        <a class="footer-link" href="pricing.html">Websites</a>
-        <a class="footer-link" href="pricing.html">Branding</a>
-        <a class="footer-link" href="pricing.html">Social Media</a>
-        <a class="footer-link" href="pricing.html">Packages</a>
+        <a class="footer-link" href="/pricing">Websites</a>
+        <a class="footer-link" href="/pricing">Branding</a>
+        <a class="footer-link" href="/pricing">Social Media</a>
+        <a class="footer-link" href="/pricing">Packages</a>
       </div>
       <div class="col-lg-3 col-md-6">
         <h6>Kingston, ON</h6>
@@ -237,7 +249,7 @@
     <h3>Let's Talk</h3>
     <p>Tell us a bit about your business and what you're looking for. We'll be in touch within one business day.</p>
     <form id="contactForm" action="https://formspree.io/f/xlgydyvp" method="POST" onsubmit="handleFormSubmit(event)">
-      <input type="hidden" name="_next" value="https://inspirie.ca/index.html"/>
+      <input type="hidden" name="_next" value="https://inspirie.ca/"/>
       <div class="form-field"><label>Your Name</label><input type="text" name="name" placeholder="Jane Smith" required/></div>
       <div class="form-field"><label>Business Name</label><input type="text" name="business" placeholder="Your Business" required/></div>
       <div class="form-field"><label>Email</label><input type="email" name="email" placeholder="hello@yourbusiness.com" required/></div>
@@ -269,4 +281,3 @@
 <script src="inspirie.js"></script>
 </body>
 </html>
-

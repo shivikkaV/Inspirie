@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pricing — Inspirie Creative Agency</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="../inspirie.css"/>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Inspirie",
+        "email": "info@inspirie.ca"
+      }
+    </script>
+  </head>
+  <body>
+
+  <script>window.ACTIVE_PAGE = 'pricing';</script>
+
+  <!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <a class="nav-brand" href="../">
+      <img src="../assets/logo.png" alt="Inspirie Logo" class="nav-logo">
+    </a>
+    <div class="nav-links">
+      <a class="nav-link-item" id="nav-home" href="../">Home</a>
+      <a class="nav-link-item" id="nav-about" href="../about">About</a>
+      <a class="nav-link-item" id="nav-pricing" href="../pricing">Pricing</a>
+      <a class="nav-link-item nav-cta" href="#" onclick="openModal(); return false;">Get Started</a>
+    </div>
+    <div class="nav-hamburger" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="nav-link-item" href="../" onclick="closeMobile()">Home</a>
+    <a class="nav-link-item" href="../about" onclick="closeMobile()">About</a>
+    <a class="nav-link-item" href="../pricing" onclick="closeMobile()">Pricing</a>
+    <a class="btn-primary-inspirie" href="#" onclick="openModal(); closeMobile(); return false;">Get Started</a>
+  </div>
+
+  <!-- ══ PAGE HERO ═══════════════════════════════════════════ -->
+  <div class="page-hero">
+    <div class="page-hero-dots"></div>
+    <div class="container">
+      <div class="col-lg-7">
+        <span class="section-label" style="color:var(--amber)">Transparent Pricing</span>
+        <h1>Plans built for<br><em>real budgets.</em></h1>
+        <p class="mt-3">No hidden fees. No confusing tiers. Just honest, affordable packages tailored to where your business is right now.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PRICING CONTENT ════════════════════════════════════ -->
+  <section class="pricing-page">
+    <div class="container">
+
+      <!-- Tabs -->
+      <div class="pricing-tabs-wrap">
+        <button class="pricing-tab active" onclick="switchTab('branding', this)">Branding</button>
+        <button class="pricing-tab" onclick="switchTab('social', this)">Social Media</button>
+        <button class="pricing-tab" onclick="switchTab('website', this)">Website</button>
+        <button class="pricing-tab" onclick="switchTab('packages', this)">Combined Packages</button>
+      </div>
+
+      <!-- ── BRANDING ── -->
+      <div class="pricing-panel active" id="panel-branding">
+        <div class="pricing-section-title">
+          <h1><em>Branding Services</em></h1>
+        </div>
+        <p class="pricing-section-sub">Build a visual identity that's cohesive, professional, and unmistakably yours.</p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-5">
+            <div class="price-card">
+              <div class="price-tier">Identity</div>
+              <div class="price-name">Logo Design</div>
+              <div class="price-tagline">Your brand's most recognizable asset — crafted with intention.</div>
+              <div class="price-divider"></div>
+              <ul class="feature-list">
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Primary logo + alternate variations</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Black, white &amp; colour versions</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Multiple revision rounds</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Full-resolution file package (PNG, SVG, PDF)</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Brand usage guidelines</li>
+              </ul>
+              <button class="btn-primary-inspirie w-100" onclick="openModal()">Get a Quote</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 offset-lg-1">
+            <div class="price-card">
+              <div class="price-tier">Full Identity</div>
+              <div class="price-name">Theme Design</div>
+              <div class="price-tagline">A complete visual system — every element working in harmony.</div>
+              <div class="price-divider"></div>
+              <ul class="feature-list">
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Custom colour palette (primary + accent + neutral)</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Typography system (display + body + supporting)</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Pattern / texture assets</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Brand board &amp; style guide PDF</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Social media graphic templates</li>
+              </ul>
+              <button class="btn-primary-inspirie w-100" onclick="openModal()">Get a Quote</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SOCIAL MEDIA ── -->
+      <div class="pricing-panel" id="panel-social">
+        <div class="pricing-section-title"><h1><em>Social Media Management</em></h1></div>
+        <p class="pricing-section-sub">Consistent, on-brand content — so your channels stay active while you run your business.</p>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="price-card h-100">
+              <div class="price-tier">Core</div>
+              <div class="price-name">Core</div>
+              <div class="price-tagline">Stay present with a steady, reliable posting schedule.</div>
+              <div class="price-divider"></div>
+              <ul class="feature-list">
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>2 posts per week</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Custom branded graphics</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Caption copywriting</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Hashtag research</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Monthly performance summary</li>
+              </ul>
+              <button class="btn-outline-inspirie w-100" onclick="openModal()">Get Started</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="price-card featured h-100">
+              <div class="price-feat-badge">Most Popular</div>
+              <div class="price-tier">Prime</div>
+              <div class="price-name">Prime</div>
+              <div class="price-tagline">Build momentum with more frequent, trend-forward content.</div>
+              <div class="price-divider"></div>
+              <ul class="feature-list">
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>3 posts per week</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Everything in Core</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Story / Reel content</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Trend monitoring &amp; implementation</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Bi-weekly strategy check-in</li>
+              </ul>
+              <button class="btn-primary-inspirie w-100" onclick="openModal()">Get Started</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="price-card h-100">
+              <div class="price-tier">Elite</div>
+              <div class="price-name">Elite</div>
+              <div class="price-tagline">Maximum presence — dominate your category online.</div>
+              <div class="price-divider"></div>
+              <ul class="feature-list">
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>4 posts per week</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Everything in Prime</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Video / Reel editing</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Comment moderation support</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Full monthly analytics report</li>
+              </ul>
+              <button class="btn-outline-inspirie w-100" onclick="openModal()">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── WEBSITE ── -->
+      <div class="pricing-panel" id="panel-website">
+        <div class="pricing-section-title"><h1><em>Website Plans</em></h1></div>
+        <p class="pricing-section-sub">From a clean online home base to a fully bespoke digital experience — we build websites that work.</p>
+        <p style="font-size:0.8rem; color:var(--grey); margin-bottom:2rem;"><i class="bi bi-info-circle me-1"></i>Additional pages beyond the included set are available as a separate charge.</p>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="price-card h-100">
+              <div class="price-tier">Starter</div>
+              <div class="price-name">Spark</div>
+              <div class="price-tagline">A clean, professional online presence — fast to launch and easy to maintain.</div>
+              <div class="price-divider"></div>
+              <ul class="feature-list">
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Template-based design</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>No animations (clean, fast)</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Mobile responsive</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Bi-yearly content updates</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Contact form + basic SEO setup</li>
+              </ul>
+              <button class="btn-outline-inspirie w-100" onclick="openModal()">Get a Quote</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="price-card featured h-100">
+              <div class="price-feat-badge">Recommended</div>
+              <div class="price-tier">Growth</div>
+              <div class="price-name">Ignite</div>
+              <div class="price-tagline">A polished, engaging site built for mobile-first audiences.</div>
+              <div class="price-divider"></div>
+              <ul class="feature-list">
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Micro-interactive animations</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Advanced mobile optimization</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Custom layout + branding integration</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Monthly updates</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Performance &amp; speed optimization</li>
+              </ul>
+              <button class="btn-primary-inspirie w-100" onclick="openModal()">Get a Quote</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="price-card h-100">
+              <div class="price-tier">Premium</div>
+              <div class="price-name">Amplify</div>
+              <div class="price-tagline">A fully bespoke digital experience with no limits on vision.</div>
+              <div class="price-divider"></div>
+              <ul class="feature-list">
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Custom development (from scratch)</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Advanced animations &amp; interactions</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Full mobile &amp; cross-browser optimization</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Updates every two weeks</li>
+                <li class="feature-item"><i class="bi bi-check-circle-fill"></i>Priority support &amp; dedicated liaison</li>
+              </ul>
+              <button class="btn-outline-inspirie w-100" onclick="openModal()">Get a Quote</button>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:0.78rem; color:var(--grey); margin-top:1.5rem; text-align:center;">
+          <i class="bi bi-info-circle me-1" style="color:var(--amber)"></i>
+          Extra pages beyond the standard page set are charged separately. Ask us for details.
+        </p>
+      </div>
+
+      <!-- ── PACKAGES ── -->
+      <div class="pricing-panel" id="panel-packages">
+        <div class="pricing-section-title"><h1><em>Combined Packages</em></h1></div>
+        <p class="pricing-section-sub">Bundle website + social media and save — the smart way to launch and grow your full online presence.</p>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="pkg-card essential h-100">
+              <div class="pkg-header">
+                <div class="pkg-badge">Essential</div>
+                <h3>Essential</h3>
+                <p>Everything you need to get online and be found.</p>
+              </div>
+              <div class="pkg-body">
+                <div class="pkg-includes">What's Included</div>
+                <div class="pkg-feature">
+                  <i class="bi bi-globe2"></i>
+                  <div class="pkg-feature-text">
+                    <strong>Spark Website</strong>
+                    <span>Template design · No animations · Bi-yearly updates</span>
+                  </div>
+                </div>
+                <div class="pkg-feature">
+                  <i class="bi bi-megaphone"></i>
+                  <div class="pkg-feature-text">
+                    <strong>Core Social Media</strong>
+                    <span>2 posts per week · Branded graphics · Captions</span>
+                  </div>
+                </div>
+                <div class="pkg-feature">
+                  <i class="bi bi-gift"></i>
+                  <div class="pkg-feature-text">
+                    <strong>Bundle Benefit</strong>
+                    <span>Cohesive brand direction across both platforms</span>
+                  </div>
+                </div>
+                <button class="btn-outline-inspirie w-100 mt-3" onclick="openModal()">Get a Quote</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="pkg-card featured h-100">
+              <div class="pkg-header" style="background:var(--green)">
+                <div class="pkg-badge">⭐ Most Popular</div>
+                <h3>Professional</h3>
+                <p>Grow your presence with more content &amp; a sharper site.</p>
+              </div>
+              <div class="pkg-body">
+                <div class="pkg-includes">What's Included</div>
+                <div class="pkg-feature">
+                  <i class="bi bi-globe2"></i>
+                  <div class="pkg-feature-text">
+                    <strong>Ignite Website</strong>
+                    <span>Micro-animations · Mobile optimized · Monthly updates</span>
+                  </div>
+                </div>
+                <div class="pkg-feature">
+                  <i class="bi bi-megaphone"></i>
+                  <div class="pkg-feature-text">
+                    <strong>Prime Social Media</strong>
+                    <span>3 posts per week · Stories/Reels · Trend-aware</span>
+                  </div>
+                </div>
+                <div class="pkg-feature">
+                  <i class="bi bi-gift"></i>
+                  <div class="pkg-feature-text">
+                    <strong>Bundle Benefit</strong>
+                    <span>Priority scheduling &amp; cross-platform consistency</span>
+                  </div>
+                </div>
+                <button class="btn-primary-inspirie w-100 mt-3" onclick="openModal()">Get a Quote</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="pkg-card signature h-100">
+              <div class="pkg-header">
+                <div class="pkg-badge">Signature</div>
+                <h3>Signature</h3>
+                <p>The full creative arsenal — built for serious growth.</p>
+              </div>
+              <div class="pkg-body">
+                <div class="pkg-includes">What's Included</div>
+                <div class="pkg-feature">
+                  <i class="bi bi-globe2"></i>
+                  <div class="pkg-feature-text">
+                    <strong>Amplify Website</strong>
+                    <span>Custom dev · Advanced animations · Bi-weekly updates</span>
+                  </div>
+                </div>
+                <div class="pkg-feature">
+                  <i class="bi bi-megaphone"></i>
+                  <div class="pkg-feature-text">
+                    <strong>Elite Social Media</strong>
+                    <span>4 posts per week · Video editing · Full analytics</span>
+                  </div>
+                </div>
+                <div class="pkg-feature">
+                  <i class="bi bi-gift"></i>
+                  <div class="pkg-feature-text">
+                    <strong>Bundle Benefit</strong>
+                    <span>Dedicated account manager &amp; priority support</span>
+                  </div>
+                </div>
+                <button class="btn-outline-inspirie w-100 mt-3" onclick="openModal()">Get a Quote</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="price-card" style="background:var(--green); border:none; text-align:center; padding:3rem;">
+              <i class="bi bi-layers-half" style="font-size:2rem; color:var(--pink); display:block; margin-bottom:1rem;"></i>
+              <h4 style="color:var(--white); font-family:var(--font-display); font-size:1.8rem; margin-bottom:0.75rem;">Add Branding to Any Package</h4>
+              <p style="color:rgba(245,240,232,0.7); max-width:480px; margin:0 auto 1.5rem;">
+                Layer in Logo Design or a full Theme Design to create a completely unified visual identity across your website and social channels.
+              </p>
+              <button class="btn-white" onclick="openModal()">Ask About Add-Ons</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ CTA BANNER ══════════════════════════════════════════ -->
+  <div class="cta-banner">
+    <div class="container text-center">
+      <h2>Not sure which plan fits?</h2>
+      <p>Book a free 20-minute discovery call and we'll help you figure out exactly what you need.</p>
+      <button class="btn-white" onclick="openModal()">Book a Free Call</button>
+    </div>
+  </div>
+
+  <!-- ══ FOOTER ══════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <a class="nav-brand" href="../">
+            <img src="../assets/logo.png" alt="Inspirie Logo" class="nav-logo">
+          </a>
+          <p style="font-size:0.875rem; line-height:1.75; max-width:280px;">
+            Kingston's creative agency for small businesses; building digital presences that are both impactful and memorable.
+          </p>
+          <div class="social-icons">
+          <a href="https://www.instagram.com/inspiriemarketing/">
+            <div class="social-icon"><i class="bi bi-instagram"></i></div>
+          </a>
+          <a href="https://www.facebook.com/people/Inspirie-Creative-Agency/61591003546255/">
+            <div class="social-icon"><i class="bi bi-facebook"></i></div>
+          </a>
+          <a href="https://www.linkedin.com/in/inspirie-creative-agency-11b61b419/?isSelfProfile=true">
+            <div class="social-icon"><i class="bi bi-linkedin"></i></div>
+          </a>
+          <a href="">
+            <div class="social-icon"><i class="bi bi-tiktok"></i></div>
+          </a>
+        </div>
+        </div>
+        <div class="col-lg-2 col-md-6 offset-lg-1">
+          <h6>Navigate</h6>
+          <a class="footer-link" href="../">Home</a>
+          <a class="footer-link" href="../about">About</a>
+          <a class="footer-link" href="../pricing">Pricing</a>
+          <a class="footer-link" href="#" onclick="openModal(); return false;">Contact</a>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6>Services</h6>
+          <a class="footer-link" href="../pricing">Websites</a>
+          <a class="footer-link" href="../pricing">Branding</a>
+          <a class="footer-link" href="../pricing">Social Media</a>
+          <a class="footer-link" href="../pricing">Packages</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h6>Kingston, ON</h6>
+          <p style="font-size:0.875rem; line-height:1.75;">Serving small businesses across Kingston and the surrounding region.</p>
+          <a href="mailto:info@inspirie.ca" style="color:var(--amber); font-size:0.875rem;">info@inspirie.ca</a>
+        </div>
+      </div>
+      <hr class="footer-divider"/>
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <p class="footer-copy mb-0">© 2025 Inspirie Creative Agency. All rights reserved.</p>
+        <p class="footer-copy mb-0">Kingston, Ontario, Canada</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══ CONTACT MODAL ══════════════════════════════════════ -->
+  <div class="modal-overlay" id="contactModal" onclick="closeModalOutside(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">×</button>
+      <h3>Let's Talk</h3>
+      <p>Tell us a bit about your business and what you're looking for. We'll be in touch within one business day.</p>
+      <form id="contactForm" action="https://formspree.io/f/xlgydyvp" method="POST" onsubmit="handleFormSubmit(event)">
+        <input type="hidden" name="_next" value="https://inspirie.ca/pricing"/>
+        <div class="form-field"><label>Your Name</label><input type="text" name="name" placeholder="Jane Smith" required/></div>
+        <div class="form-field"><label>Business Name</label><input type="text" name="business" placeholder="Your Business" required/></div>
+        <div class="form-field"><label>Email</label><input type="email" name="email" placeholder="hello@yourbusiness.com" required/></div>
+        <div class="form-field">
+          <label>I'm interested in…</label>
+          <select name="interest">
+            <option>Website Creation</option>
+            <option>Branding / Identity</option>
+            <option>Social Media Management</option>
+            <option>A Combined Package</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-field"><label>Anything else?</label><textarea name="message" placeholder="Tell us a bit about your goals…"></textarea></div>
+        <button type="submit" class="btn-primary-inspirie w-100" id="submitBtn">Send Message</button>
+      </form>
+      <p id="formSuccess" style="display:none; text-align:center; color:var(--green); font-weight:500; margin-top:1rem;">
+        ✓ Message sent! We'll be in touch within one business day.
+      </p>
+      <p id="formError" style="display:none; text-align:center; color:#c0392b; font-size:0.875rem; margin-top:1rem;">
+        Something went wrong. Please try again or email us directly at <a href="mailto:info@inspirie.ca" style="color:#c0392b;">info@inspirie.ca</a>.
+      </p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../inspirie.js"></script>
+  </body>
+</html>
