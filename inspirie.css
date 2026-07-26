@@ -441,7 +441,7 @@ section { padding: 7rem 0; }
 .why-content h5 { font-size: 1.1rem; color: var(--pink); margin-bottom: 0.35rem; }
 .why-content p { color: var(--grey); font-size: 0.9rem; }
 .why-visual {
-  background: var(--blue-d);
+  background: var(--blue-purple-d);
   border-radius: var(--radius-lg);
   padding: 3rem; height: 100%; min-height: 420px;
   display: flex; flex-direction: column; justify-content: flex-end;
@@ -476,14 +476,14 @@ section { padding: 7rem 0; }
   color: transparent !important;
 }
 .mission-card {
-  background: var(--white);
+  background: var(--blue-purple-d);
   border-radius: var(--radius-lg);
   padding: 2.5rem;
   border-left: 4px solid var(--pink);
   box-shadow: 0 4px 24px rgba(0,0,0,0.04);
 }
-.mission-card h4 { color: var(--charcoal); margin-bottom: 0.75rem; font-size: 1.3rem; }
-.mission-card p { color: var(--charcoal); font-size: 0.92rem; }
+.mission-card h4 { color: var(--white); margin-bottom: 0.75rem; font-size: 1.3rem; }
+.mission-card p { color: var(--white); font-size: 0.92rem; }
 .values-section { background: var(--charcoal); }
 .values-section h2 { font-size: clamp(2rem, 3.5vw, 3rem); color: var(--white); }
 .values-section h2 em{
