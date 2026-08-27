@@ -16,8 +16,8 @@
   --blue-purple: #6236c9;
   --blue-l: #909bf7;
 
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body:    'Montserrat', sans-serif;
+  --font-display: 'Cormorant Garamond', sans-serif;
+  --font-body:    'Noto Sans', sans-serif;
 
   --radius-sm: 4px;
   --radius-md: 10px;
@@ -36,6 +36,7 @@ body {
   font-size: 16px;
   line-height: 1.7;
   overflow-x: hidden;
+  cursor: url(assets/Inspirie-Logo-Transparent.png), auto;
 }
 h1,h2,h3,h4,h5 {
   font-family: var(--font-display);
@@ -328,13 +329,25 @@ section { padding: 7rem 0; }
   border-radius: 50%;
   display: inline-block;
 }
-.hero h1 {
-  font-size: clamp(3rem, 6vw, 5.5rem);
-  font-weight: 700;
+
+.hero-heading {
+  font-size: clamp(5rem, 10vw, 15rem);
+  font-weight: 1000;
   color: var(--white);
   margin-bottom: 1.6rem;
   letter-spacing: -0.02em;
 }
+
+.hero-scroll-text {
+  position: absolute; bottom: 2rem; left: 50%;
+  transform: translateX(-50%);
+  color: var(--white);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
 .hero h1 em { 
   font-style: italic; 
   background-image: linear-gradient(135deg, var(--blue-d) 0%, var(--blue-purple) 14.28%, var(--blue-l) 28.57%, var(--pink-l) 42.86%, var(--orange) 57.14%, var(--green-l) 71.43%, var(--pink) 85.71%, var(--green) 100%);
